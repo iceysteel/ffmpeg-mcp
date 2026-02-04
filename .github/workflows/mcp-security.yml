@@ -1,5 +1,5 @@
 name: MCP Security Scan                                                                                                                
-  on:                                                                                                                                    
+  "on":                                                                                                                                  
     pull_request:                                                                                                                        
       branches: [main]                                                                                                                   
                                                                                                                                          
@@ -10,7 +10,7 @@ name: MCP Security Scan
         checks: write                                                                                                                    
         pull-requests: write                                                                                                             
       steps:                                                                                                                             
-        - uses: iceysteel/mcp-lockdown-github-action@main                                                                                       
+        - uses: iceysteel/mcp-lockdown-github-action@main                                                                                
           with:                                                                                                                          
             api-key: ${{ secrets.MCP_LOCKDOWN_API_KEY }}                                                                                 
             techniques: owasp-top-10                                                                                                     
