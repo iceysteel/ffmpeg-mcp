@@ -11,6 +11,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: iceysteel/mcp-lockdown-github-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           api-key: ${{ secrets.MCP_LOCKDOWN_API_KEY }}
           techniques: owasp-top-10
